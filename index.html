@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salah Times</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Salah Times</h1>
+      <p id="date"></p>
+      <p id="location" class="muted">Locating…</p>
+    </header>
+
+    <section id="next" hidden>
+      <span class="muted">Next prayer</span>
+      <strong id="next-name"></strong>
+      <span id="next-countdown"></span>
+    </section>
+
+    <ul id="times"></ul>
+
+    <p id="error" class="error" hidden></p>
+
+    <details>
+      <summary>Settings</summary>
+      <label>Calculation method
+        <select id="method"></select>
+      </label>
+      <label>Asr
+        <select id="asr">
+          <option value="1">Standard (Shafi'i, Maliki, Hanbali)</option>
+          <option value="2">Hanafi</option>
+        </select>
+      </label>
+      <button id="relocate" type="button">Update location</button>
+    </details>
+  </main>
+  <script src="praytimes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
